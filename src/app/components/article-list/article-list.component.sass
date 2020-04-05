@@ -1,0 +1,38 @@
+\:host
+  display: block
+  height: 100%
+  padding-top: 20px
+  padding-bottom: 20px
+  .article-list-card
+    height: 100%
+    min-height: 400px
+    &__header
+      color: #333333
+    .mat-card-content
+      height: 100%
+    .mat-list
+      height: calc(100% - 60px)
+      overflow: auto
+  .mat-list-item
+    height: auto
+    min-height: 60px
+  .action-button
+    flex: 0 0 140px
+
+  .mat-raised-button
+    margin-left: auto
+  .article-number
+    flex: 0 0 80px
+    .badge
+      padding: 6px 12px
+  .article-text
+    color: #777777
+    flex: 1 1 auto
+    padding: 14px   20px
+
+  ::ng-deep
+    .mat-button-wrapper
+      padding-right: 20px
+    .mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content
+      top: 6px
+      right: 8px

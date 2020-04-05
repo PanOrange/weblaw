@@ -1,0 +1,30 @@
+<mat-card class="article-list-card">
+  <mat-card-content>
+    <div mat-subheader class="article-list-card__header">Статті кодекса</div>
+    <mat-divider></mat-divider>
+    <mat-list>
+      <mat-list-item *ngFor="let article of articlesList">
+<!--        <mat-icon mat-list-icon>insert_drive_file</mat-icon>-->
+        <div class="article-number">
+          <span class="badge badge-warning">{{ article.number }}</span>
+        </div>
+        <div class="article-text"> {{ article.text }} </div>
+        <div class="action-button">
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="!article.documentsCount"
+            [matBadge]="article.documentsCount"
+            matBadgePosition="after"
+            [matBadgeColor]="article.documentsCount ? 'accent' : 'warn'"
+          >Документів
+          </button>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+
+
+
