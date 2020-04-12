@@ -19,8 +19,6 @@
   .action-button
     flex: 0 0 140px
 
-  .mat-raised-button
-    margin-left: auto
   .article-number
     flex: 0 0 80px
     .badge
@@ -28,11 +26,16 @@
   .article-text
     color: #777777
     flex: 1 1 auto
-    padding: 14px   20px
+    padding: 14px 20px
 
   ::ng-deep
+    .mat-raised-button
+      margin-left: auto
+      &[disabled]
+        .mat-badge-content
+          background-color: #aaaaaa
     .mat-button-wrapper
       padding-right: 20px
     .mat-badge-medium.mat-badge-overlap.mat-badge-after .mat-badge-content
-      top: 6px
+      top: 7px
       right: 8px
