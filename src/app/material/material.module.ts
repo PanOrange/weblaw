@@ -8,12 +8,14 @@ import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
 import { MatBadgeModule } from "@angular/material/badge";
 import { MatButtonModule } from "@angular/material/button";
+import { MatInputModule } from "@angular/material/input";
 
 const materialModules = [
   MatBadgeModule,
   MatButtonModule,
   MatToolbarModule,
   MatIconModule,
+  MatInputModule,
   MatSidenavModule,
   MatCardModule,
   MatListModule,
