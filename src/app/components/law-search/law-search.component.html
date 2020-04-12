@@ -9,19 +9,17 @@
           <p>Введіть номер статті для швидкого переходу</p>
           <form>
             <mat-form-field>
-              <input matInput placeholder="Номер статті">
+              <input matInput placeholder="Номер статті" [formControl]="filterControl">
             </mat-form-field>
-            <button mat-stroked-button color="primary">OK</button>
+            <button mat-stroked-button color="primary" (click)="applyFilter()">OK</button>
           </form>
           <p>Останнє оновлення бази 04/04/2020</p>
           <p>додано 3000 документів</p>
         </mat-card-content>
 
         <mat-card-actions>
-          <a
-            mat-stroked-button color="primary">Показати лише оновлені статті</a>
-          <a
-            mat-stroked-button color="primary">Показаті всю наявну базу</a>
+          <a mat-stroked-button color="primary">Показати лише оновлені статті</a>
+          <a mat-stroked-button color="primary">Показаті всю наявну базу</a>
         </mat-card-actions>
       </mat-card>
     </div>
