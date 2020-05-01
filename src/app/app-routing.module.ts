@@ -7,7 +7,7 @@ import { SearchResultsComponent } from "./components/search-results/search-resul
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'law-search' },
   { path: 'law-search', component: LawSearchComponent },
-  { path: 'search-results', component: SearchResultsComponent },
+  { path: 'search-results/:id', component: SearchResultsComponent },
 ];
 
 @NgModule({

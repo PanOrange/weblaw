@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from "../../services/articles.service";
 import { takeUntil } from "rxjs/operators";
 import { Subject } from "rxjs";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-article-list',
@@ -13,7 +14,7 @@ export class ArticleListComponent implements OnInit {
 
   private destroy$: Subject<null> = new Subject<null>();
 
-  constructor(private articlesService: ArticlesService) { }
+  constructor(private articlesService: ArticlesService, private router: Router) { }
 
   ngOnInit(): void {
     this.articlesService.articles$.pipe(takeUntil(this.destroy$)).subscribe(articles => {
@@ -21,4 +22,7 @@ export class ArticleListComponent implements OnInit {
     });
   }
 
+  onArticleSelection(articleNumber: number): void {
+    this.router.navigate(['search-results', articleNumber]);
+  }
 }

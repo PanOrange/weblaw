@@ -1,1 +1,82 @@
-<p>search-results works!</p>
+<div class="container full-height-container page-wrapper">
+  <mat-card class="search-results-card">
+    <mat-card-content>
+      <div class="d-flex flex-sm-column flex-md-row justify-content-between align-items-center">
+        <div mat-subheader class="search-results-card__header">
+          <a mat-stroked-button color="primary" routerLink="/law-search">
+            <mat-icon aria-hidden="false">keyboard_arrow_left</mat-icon>
+            <span>Назад</span>
+          </a>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+
+      <div class="list-container">
+        <table mat-table [dataSource]="dataSource">
+
+          <ng-container matColumnDef="link">
+            <td mat-cell *matCellDef="let element"> {{element.link}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="note1">
+            <td mat-cell *matCellDef="let element"> {{element.note1}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="note2">
+            <td mat-cell *matCellDef="let element"> {{element.note2}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="note3">
+            <td mat-cell *matCellDef="let element"> {{element.note3}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="note4">
+            <td mat-cell *matCellDef="let element"> {{element.note4}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="note5">
+            <td mat-cell *matCellDef="let element"> {{element.note5}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="note6">
+            <td mat-cell *matCellDef="let element"> {{element.note6}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="note7">
+            <td mat-cell *matCellDef="let element"> {{element.note7}} </td>
+          </ng-container>
+
+          <!-- Header row first group -->
+          <ng-container matColumnDef="header-row-first-group">
+            <th mat-header-cell *matHeaderCellDef
+                colspan="1">
+              Результати для статті {{ activeArticle }}
+            </th>
+          </ng-container>
+
+          <!-- Header row second group top -->
+          <ng-container matColumnDef="header-row-second-group">
+            <th mat-header-cell *matHeaderCellDef colspan="7">Примітки</th>
+          </ng-container>
+
+          <ng-container matColumnDef="header-subrow-first-group">
+            <th mat-header-cell *matHeaderCellDef
+                colspan="1">
+              Документ
+            </th>
+          </ng-container>
+
+          <!-- Header row second group bottom -->
+          <ng-container matColumnDef="header-subrow-second-group">
+            <th mat-header-cell *matHeaderCellDef colspan="7">статті, що містяться в документі, окрім затребуваної</th>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="['header-row-first-group', 'header-row-second-group']; sticky: true"></tr>
+          <tr mat-header-row *matHeaderRowDef="['header-subrow-first-group', 'header-subrow-second-group']"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        </table>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

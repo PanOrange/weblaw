@@ -9,10 +9,12 @@ import { MatListModule } from "@angular/material/list";
 import { MatBadgeModule } from "@angular/material/badge";
 import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from "@angular/material/input";
+import { MatTableModule } from "@angular/material/table";
 
 const materialModules = [
   MatBadgeModule,
   MatButtonModule,
+  MatTableModule,
   MatToolbarModule,
   MatIconModule,
   MatInputModule,
